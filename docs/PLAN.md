@@ -1,24 +1,36 @@
 # Plan de desarrollo
 
 ## Concepto
-Un RPG de fantasía oscura con exploración, progresión, combate, misiones y mazmorras.
+RPG de fantasía oscura de mundo abierto: exploras un mundo abandonado, encuentras vendedores, derrotas NPC, consigues equipo, mejoras tu personaje y puedes combatir contra otros jugadores.
 
 ## Primera zona: El Reino Caído
-- Un pequeño pueblo seguro para aprender los controles.
-- Un camino hacia un bosque antiguo.
+- Un pequeño pueblo seguro con vendedores y punto de aparición.
+- Caminos hacia un bosque antiguo y ruinas.
+- Enemigos NPC que entregan experiencia, monedas y objetos.
 - Una ruina que funciona como primera mazmorra.
-- Un enemigo sencillo y un primer jefe.
+- Un enemigo poderoso como primer jefe.
+- Afueras del pueblo con PvP libre.
+
+## Sistemas definidos
+- PvP libre fuera de zonas seguras.
+- Zonas seguras en pueblos, vendedores y puntos de aparición.
+- Al morir no se pierde ningún objeto, moneda ni progreso.
+- Protección breve al reaparecer; se cancela si el jugador ataca.
+- Recompensas PvP limitadas para evitar que se explote derrotando repetidamente al mismo jugador.
+- Detalles en [Sistema PvP](SISTEMA-PVP.md).
 
 ## Orden de trabajo
 1. Base técnica y estructura.
-2. Zona inicial y puntos de aparición.
-3. Salud, daño y combate básico.
-4. Enemigos y recompensas.
-5. Misiones e inventario.
-6. Guardado de progreso.
-7. Expansión a otros reinos.
+2. Diseño del mapa y zonas seguras.
+3. Salud, daño y combate básico contra NPC.
+4. Recompensas, experiencia e inventario.
+5. Sistema PvP con validación del servidor.
+6. Vendedores y economía.
+7. Guardado de progreso.
+8. Expansión a otros reinos.
 
 ## Reglas de desarrollo
 - Probar cada sistema antes de añadir el siguiente.
-- Las recompensas y el daño se validan en el servidor.
+- El servidor valida el daño, las zonas, las recompensas y las compras.
 - No implementar guardado permanente hasta probar los datos y sus errores.
+- Mantener la muerte sin pérdida de objetos.
